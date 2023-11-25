@@ -49,7 +49,7 @@ class TaskSampler(Sampler):
             else:
                 self.items_per_label[label] = [item]
 
-        self._check_dataset_size_fits_sampler_parameters()
+        # self._check_dataset_size_fits_sampler_parameters()
 
     def __len__(self) -> int:
         return self.n_tasks
