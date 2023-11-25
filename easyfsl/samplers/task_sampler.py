@@ -43,7 +43,7 @@ class TaskSampler(Sampler):
         self.n_tasks = n_tasks
 
         self.items_per_label: Dict[int, List[int]] = {}
-        for item, label in enumerate(dataset.get_labels()):
+        for item, label in enumerate(dataset.classes):
             if label in self.items_per_label:
                 self.items_per_label[label].append(item)
             else:
